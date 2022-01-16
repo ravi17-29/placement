@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://cdpn.io/laurencenairne/fullpage/zLXRPq -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>CodePen - Good Vibes Form</title>
+  
+  
+  
+  
+<style>
+body {
+  text-align: center;
+  background-color: #a9d7e9;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+p {
+  font-size: 22px;
+}
+
+.form-rows {
+  position: static;
+  display: block;
+}
+
+.master-div-style {
+  margin: auto;
+  width: 800px;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  padding: 20px 10px 10px 10px;
+}
+
+.fields {
+  display: inline-block;
+  text-align: left;
+  width: 48%;
+  vertical-align: middle;
+}
+.labels {
+  display: inline-block;
+  text-align: right;
+  width: 40%;
+  padding: 5px;
+  vertical-align: top;
+  margin-top: 10px;
+}
+
+.input-fields {
+  height: 20px;
+  width: 280px;
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid #c0c0c0;
+  border-radius: 4px;
+}
+
+.dropdown {
+  height: 35px;
+  width: 140px;
+  padding: 5px;
+  margin: 15px 10px 10px 10px;
+  border: 1px solid #c0c0c0;
+  border-radius: 4px;
+}
+
+.radio {
+  position: relative;
+  left: -43px;
+  margin-left: 10px;
+  display: block;
+  padding-bottom: 10px;
+}
+
+.user-selection {
+  float: left;
+  margin-right: 5px;
+}
+
+.button {
+  font-size: 1em;
+  background-color: #6ba2ce;
+  color: white;
+  border: 0px solid;
+  border-radius: 4px;
+  height: 40px;
+  width: 80px;
+  margin: 10px;
+}
+
+@media (max-width: 833px) {
+  .master-div-style {
+    width: 70%;
+  }
+
+  .fields {
+    display: inline-block;
+    text-align: left;
+    width: 48%;
+    vertical-align: middle;
+  }
+
+  .input-fields {
+    width: 80%;
+  }
+
+  .dropdown {
+    width: 90%;
+  }
+}
+
+@media (max-width: 520px) {
+  .master-div-style {
+    width: 80%;
+  }
+
+  .fields {
+    width: 80%;
+    float: left;
+  }
+  .labels {
+    width: 100%;
+    text-align: left;
+  }
+
+  .input-fields {
+    width: 100%;
+  }
+
+  .dropdown {
+    width: 100%;
+  }
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  
+
+<header>
+  <link href="./css" rel="stylesheet" type="text/css">
+  <link href="./css(1)" rel="stylesheet" type="text/css">
+  <link href="./css(2)" rel="stylesheet" type="text/css">
+</header>
+
+
+  <main>
+    <h1 id="title">Good Vibes Form</h1>
+    <div class="master-div-style">
+      <p id="description">Tell us something positive that happened to you today.</p>
+      <form id="survey-form" action="https://cdpn.io/do-something">
+        <div class="form-rows">
+          <div class="labels">
+            <label for="name" id="name-label">Name</label>
+          </div>
+          <div class="fields">
+            <input type="text" id="name" class="input-fields" placeholder="Enter your name" required="">
+          </div>
+        </div>
+        <div class="form-rows">
+          <div class="labels">
+            <label for="email" id="email-label">Email</label>
+          </div>
+          <div class="fields">
+            <input type="email" id="email" class="input-fields" placeholder="Enter your email address" required="">
+          </div>
+        </div>
+        <div class="form-rows">
+          <div class="labels">
+            <label for="number" id="number-label">On a scale of 1-10, how good was it?</label>
+          </div>
+          <div class="fields">
+            <input type="number" id="number" class="input-fields" placeholder="Enter a number between 1 and 10" min="1" max="10">
+          </div>
+        </div>
+        <div class="form-rows">
+          <div class="labels">
+            <label for="dropdown" id="dropdown-label">Where did it happen?</label>
+          </div>
+          <div class="fields">
+            <select name="Location of positive event" id="dropdown" class="dropdown">
+                <option value="home">At home</option>
+                <option value="commute">On my commute</option>
+                <option value="work">At work</option>
+                <option value="outside">On the street</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-rows">
+          <div class="labels">
+            <label for="time-of-day">At what time of day did it happen?</label>
+          </div>
+          <div class="fields">
+            <ul id="time-of-day" style="list-style: none;">
+              <li class="radio">
+                <label>
+                  Morning
+                  <input name="time-radio" type="radio" value="1" class="user-selection">
+                </label>
+              </li>
+              <li class="radio">
+                <label>
+                  Afternoon
+                  <input name="time-radio" type="radio" value="2" class="user-selection">
+                </label>
+              </li>
+              <li class="radio">
+                <label>
+                  Evening
+                  <input name="time-radio" type="radio" value="3" class="user-selection">
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="form-rows">
+          <div class="labels">
+            <label for="feelings">
+              What emotions did you experience?
+              <br>
+              (Select all that apply)
+            </label>
+          </div>
+          <div class="fields">
+            <ul id="feelings" style="list-style: none;">
+              <li class="radio">
+                <label>
+                  <input name="feeling-check" value="1" type="checkbox" class="user-selection">
+                  Excited
+                </label>
+              </li>
+              <li class="radio">
+                <label>
+                  <input name="feeling-check" value="2" type="checkbox" class="user-selection">
+                  Humbled
+                </label>
+              </li>
+              <li class="radio">
+                <label>
+                  <input name="feeling-check" value="3" type="checkbox" class="user-selection">
+                  Elated
+                </label>
+              </li>
+              <li class="radio">
+                <label>
+                  <input name="feeling-check" value="4" type="checkbox" class="user-selection">
+                  Loved
+                </label>
+              </li>
+              <li class="radio">
+                <label>
+                  <input name="feeling-check" value="5" type="checkbox" class="user-selection">
+                  Enthusiastic
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="form-rows">
+          <div class="labels">
+            <label for="event-details">
+              Please describe your positive experience.
+            </label>
+          </div>
+          <div class="fields">
+            <textarea id="event-details" class="input-fields" style="height: 50px;resize:vertical;font-family: Open Sans Condensed;" name="event-details" cols="1" rows="1" placeholder="Enter your experience here..."></textarea>
+          </div>
+        </div>
+        <button class="button" id="submit" type="submit">Submit</button>
+      </form>
+    </div>
+  </main>
+  <script src="./bundle.js.download"></script><div id="fcc_test_suite_wrapper" style="position: relative !important; z-index: 99999 !important;"></div>
+
+
+
+    <script src="./stopExecutionOnTimeout-8216c69d01441f36c0ea791ae2d4469f0f8ff5326f00ae2d00e4bb7d20e24edb.js.download"></script>
+
+  
+      <script id="rendered-js">
+// !! IMPORTANT README:
+
+// You may add additional external JS and CSS as needed to complete the project, however the current external resource MUST remain in place for the tests to work. BABEL must also be left in place. 
+
+/***********
+INSTRUCTIONS:
+  - Select the project you would 
+    like to complete from the dropdown 
+    menu.
+  - Click the "RUN TESTS" button to
+    run the tests against the blank 
+    pen.
+  - Click the "TESTS" button to see 
+    the individual test cases. 
+    (should all be failing at first)
+  - Start coding! As you fulfill each
+    test case, you will see them go   
+    from red to green.
+  - As you start to build out your 
+    project, when tests are failing, 
+    you should get helpful errors 
+    along the way!
+    ************/
+
+// PLEASE NOTE: Adding global style rules using the * selector, or by adding rules to body {..} or html {..}, or to all elements within body or html, i.e. h1 {..}, has the potential to pollute the test suite's CSS. Try adding: * { color: red }, for a quick example!
+
+// Once you have read the above messages, you can delete all comments.
+//# sourceURL=pen.js
+    </script>
+
+  
+
+
+
+
+ 
+</body></html>
